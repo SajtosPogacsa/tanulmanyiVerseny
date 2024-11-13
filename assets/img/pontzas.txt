@@ -1,0 +1,7 @@
+4,6-5 között legend 
+4-4,5 között emerald
+3,6-4 között gold
+3-3,5 között silver
+2-3 között bronz 
+2 alatt írja ki a program, hogy jobb ha elmentek dolgozni
+
