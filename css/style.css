@@ -2,21 +2,35 @@
     margin: 0;
 }
 
+html {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     min-height: 100%;
     background: linear-gradient(green, gold, grey);
     background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+ul {
+    text-align: left;
+}
+
 main {
-    margin: 5% 10%;
+    height: 100%;
     background-color: rgba(255,255,255, .4);
 }
 
@@ -72,4 +86,8 @@ button {
     .shields {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+input {
+    width: 25%;
 }
