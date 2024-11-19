@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 50px
 }
 
 ul {
@@ -46,23 +47,44 @@ img {
     width: 100px;
 }
 
+.shield {
+    position: relative;
+}
+
 .shields {
     display: grid;
     gap: 25px ;
     grid-template-columns: repeat(5, 1fr);
-    scale: 0.75;
+    scale: 0.75;;
 }
 
-.shields div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 5px solid green;    
+.front, .back {
+    border: 0px solid green;
     height:200px;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.front {
+    box-shadow: 1px 1px 50px 5px green;
+}
+
+.back {
+    background-color: rgb(75,75,75);
+    display: none;
+}
+
+.front:hover {
+    display: none;
+}
+
+.back:hover {
+    display: block;
 }
 
 button {

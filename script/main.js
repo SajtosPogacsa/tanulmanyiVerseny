@@ -1,5 +1,4 @@
 const calcBtn = document.getElementById("calc")
-const avgBtn = document.getElementById("avg")
 
 if (calcBtn) {
     calcBtn.addEventListener("click", ()=> {
@@ -7,22 +6,16 @@ if (calcBtn) {
     })
 }
 
-avgBtn.addEventListener("click", () => {
-    let input = document.getElementById("input")
-    let sum = 0;
+let shields = document.querySelectorAll('.front')
 
+shields.forEach(shield => {
+    shield.addEventListener("mouseover", ()=> {
+        shield.nextElementSibling.style.display = 'block'
+    })
 
-    let data = input.value.split(",")
-    data.forEach(element => {
-        sum += parseInt(element)
-    });
-
-    let average = sum / data.length
-    displayShield(average)
+    shield.addEventListener("mouseout", ()=> {
+        shield.nextElementSibling.style.display = 'none'
+    })
 })
 
 
-function displayShield(average) {
-    let output = document.getElementById("output")
-    output.innerHTML += `Az osztály átlaga ${average}`
-}
